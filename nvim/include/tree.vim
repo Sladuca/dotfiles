@@ -22,5 +22,5 @@ function! OpenToRight()
   :normal P
 endfunction
 function! Netrw_mappings()
-    noremap V :call OpenToRight()<cr>
+    noremap <buffer> V :call OpenToRight()<cr>
 endfunction
