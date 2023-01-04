@@ -14,14 +14,14 @@ disabled = true
 style_user = "green bold"
 style_root = "red bold"
 format = "[$user]($style) "
-disabled = false
+disabled = true
 show_always = true
 
 [hostname]
 ssh_only = false
 format = 'on [$hostname](bold purple) '
 trim_at = "."
-disabled = false
+disabled = true
 
 #  
 # configure directory
@@ -34,7 +34,7 @@ style = "bold italic blue"
 [cmd_duration]
 min_time = 4
 show_milliseconds = false
-disabled = false
+disabled = true
 style = "bold italic red"
 
 [aws]
@@ -56,7 +56,7 @@ style = "blue bold"
 only_with_files = true
 detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
 detect_folders = []
-disabled = false
+disabled = true
 
 [elixir]
 symbol = " "
@@ -103,7 +103,7 @@ symbol = " "
 [python]
 symbol = "🐍 "
 #pyenv_version_name = true
-format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
+format = 'via [${symbol} $version (\($virtualenv\) )]($style)'
 style = "bold yellow"
 pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3", "python2"]
@@ -126,6 +126,6 @@ symbol = " "
 symbol = "ﯣ "
 
 [nodejs]
-format = "via [ Node.js $version](bold green) "
+format = "via [ $version](bold green) "
 detect_files = ["package.json", ".node-version"]
 detect_folders = ["node_modules"]
