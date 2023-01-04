@@ -31,4 +31,3 @@ else
 fi
 
 pip3 install thefuck --user
-

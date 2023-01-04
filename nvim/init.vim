@@ -22,19 +22,19 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'cespare/vim-toml'
 Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'
+Plug 'preservim/nerdtree'
 
 " Initialize plugin system
 call plug#end()
 
 " include post-plugin files
-let g:post_plugin_config_file_list = ['globals.vim', 'autocmd.vim', 'ui.vim']
+let g:post_plugin_config_file_list = ['globals.vim', 'autocmd.vim', 'ui.vim', 'nerdtree.vim']
 for s:fname in g:post_plugin_config_file_list
     execute printf('source %s/include/%s', g:nvim_config_root, s:fname)
 endfor
