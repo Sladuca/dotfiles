@@ -1,5 +1,7 @@
 # Font configuration
 font:
+  size: 8.5
+
   normal:
     family: "FiraCode Nerd Font"
     #style: Regular
