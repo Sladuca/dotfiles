@@ -29,6 +29,7 @@ Plug 'cespare/vim-toml'
 Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'
 Plug 'preservim/nerdtree'
+Plug 'xiyaowong/nvim-transparent'
 
 " Initialize plugin system
 call plug#end()
