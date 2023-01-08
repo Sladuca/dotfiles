@@ -13,7 +13,11 @@ then
 	fi
 else
 	sudo apt update && sudo apt upgrade
-	sudo apt install git-all build-essential zsh mosh python3-dev python3-pip python3-setuptools
+	sudo apt install git-all build-essential zsh mosh python3-dev python3-pip python3-setuptools neovim
+
+    curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
+    sudo dpkg -i ripgrep_13.0.0_amd64.deb
+
 fi
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -24,7 +28,7 @@ rustup update
 
 if [[ $OSTYPE == 'darwin'* ]]
 then
-	brew install neovim fzf
+	brew install neovim fzf ripgrep
 	$(brew --prefix)/opt/fzf/install
 else
 	sudo apt install neovim fzf
