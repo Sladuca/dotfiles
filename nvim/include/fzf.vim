@@ -21,4 +21,8 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-:nnoremap <C-f> :FZF<CR>
+:nnoremap <leader>p :FZF<CR>
+:nnoremap <leader>f :Rg<CR>
+
+:nnoremap <C-p> :FZF ~<CR>
+:nnoremap <C-f> :Rg ~<CR>

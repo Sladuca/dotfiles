@@ -6,4 +6,4 @@ let g:transparent_enabled = v:true
 colorscheme gruvbox-material
 
 " number
-:set number relativenumber
+:set number
