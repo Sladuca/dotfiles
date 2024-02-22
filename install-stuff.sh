@@ -10,7 +10,16 @@ then
 	if [[ $? != 0 ]]
 	then
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+		if [[ $(uname -p) == 'arm' ]]
+		then
+			echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+			eval "$(/opt/homebrew/bin/brew shellenv)"
+		else
+			echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
+			eval "$(/usr/local/bin/brew shellenv)"
+		fi
 	fi
+
 else
 	sudo apt update && sudo apt upgrade
 	sudo apt install git-all build-essential zsh mosh python3-dev python3-pip python3-setuptools neovim fzf
@@ -20,18 +29,15 @@ else
 
 fi
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install node
-
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-rustup update
+curl https://get.volta.sh | zsh
+$HOME/.volta/bin/volta install node
 
 if [[ $OSTYPE == 'darwin'* ]]
 then
-	brew install neovim fzf ripgrep
+    echo "hi"
+	brew install neovim fzf ripgrep thefuck alacritty
 	$(brew --prefix)/opt/fzf/install
 else
-	sudo apt install neovim fzf
+	sudo apt install neovim fzf python3-dev python3-pip python3-setuptools
+    pip3 install thefuck --user
 fi
-
-pip3 install thefuck --user
