@@ -48,3 +48,8 @@ nnoremap <leader>rs :vertical resize 82<CR>
 " resize splits in whatever direction by increments
 nnoremap <leader>rw :vertical resize +10<CR>
 nnoremap <leader>rh :vertical resize -10<CR>
+
+" more natural split opening
+" (open to bottom / right, not top/left
+set splitbelow
+set splitright

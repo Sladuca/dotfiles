@@ -1,0 +1,30 @@
+import = ["/Users/eon/.config/alacritty/colors.toml", "/Users/eon/.config/alacritty/fonts.toml"]
+live_config_reload = true
+
+[cursor]
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+decorations = "buttonless"
+dynamic_title = true
+opacity = 0.85
+startup_mode = "Windowed"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window.dimensions]
+columns = 82
+lines = 25
+
+[window.padding]
+x = 20
+y = 20
