@@ -35,7 +35,7 @@ $HOME/.volta/bin/volta install node
 if [[ $OSTYPE == 'darwin'* ]]
 then
     echo "hi"
-	brew install neovim fzf ripgrep thefuck alacritty
+	brew install neovim fzf ripgrep thefuck
 	$(brew --prefix)/opt/fzf/install
 else
 	sudo apt install neovim fzf python3-dev python3-pip python3-setuptools

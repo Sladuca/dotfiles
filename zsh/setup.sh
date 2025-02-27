@@ -4,8 +4,6 @@ set -u
 
 SCRIPT_DIR="$(dirname "$0")"
 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 curl -sS https://starship.rs/install.sh | sh
 
 if test -f "~/.zshrc"
@@ -25,9 +23,4 @@ then
 	cp ~/.config/starship.toml ~/.config/starship.toml.backup
 fi
 cp "$SCRIPT_DIR/starship/starship.toml" ~/.config/starship.toml
-
-if test -d "~/.config/alacritty"
-then
-	cp -r ~/.config/alacritty ~/.config/alacritty.backup
-fi
-cp -r "$SCRIPT_DIR/alacritty" ~/.config/
+cp "$SCRIPT_DIR/.zimrc" ~/.zimrc
